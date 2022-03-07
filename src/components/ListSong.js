@@ -12,7 +12,7 @@ function ListSong() {
         setIdSong(song.id);
     },[song]);
     return (
-        <div className="col-span-2 overflow-y-scroll flex-auto">
+        <div className="col-span-2 overflow-y-scroll flex-auto sm:table-fixed w-auto h-auto text-justify">
             <table className="table-auto w-full">
                 <thead className="dark:text-white text-black h-12">
                     <tr>
@@ -23,7 +23,7 @@ function ListSong() {
 
                     </tr>
                 </thead>
-                <tbody className="">
+                <tbody className="sm:shrink-0">
                     {
                         DataSongs.map((song, index) => (
                             <tr key={index } className={`h-12 dark:text-slate-50 text-black dark:bg-violet-500 to-pink-400  dark:hover:bg-violet-600 dark:hover:bg-purple-500 hover:bg-cyan-300  hover:bg-purple-400 ${idSong === song.id && 'dark:bg-purple-300 bg-purple-400 dark:text-teal-500 text-cyan-300'}`}
